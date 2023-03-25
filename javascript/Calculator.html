@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+    function Cal(value){  
+a=parseInt(document.f1.a1.value); 
+b=parseInt(document.f1.b1.value); 
+if(value=="Add"){
+                     result=a +b ;
+                    document.f1.sum.value=result;
+                }
+                else if(value=="Subtract"){
+                    result=a -b ;
+                    document.f1.sum.value=result;
+                }
+                else if(value=="Multiply"){
+                     result=a * b ;
+                    document.f1.sum.value=result;
+                }
+                else if(value=="Divide"){
+                  result=a / b ;
+                  document.f1.sum.value=result;
+                }
+result = a+b; 
+document.f1.sum.value=result;
+    }
+    </script>
+</head>
+
+<body>
+    <h1> Calculator </h1>
+    <form name="f1"> 
+    Number1: <input type="text" name="a1"> 
+    Number2: <input type="text" name="b1"> <br> 
+    Result: <input type="text" name="sum"> <br>
+    <input type="button" value="Add" onclick="sum()"> 
+    <input type="button" value="Multiply" onclick="Multi()">
+    <input type="button" value="Subtract" onclick="Minus()"> 
+    <input type="button" value="Divide" onclick="divide()">
+ </form>
+</body>
+</html>

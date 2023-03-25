@@ -1,0 +1,55 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+                function cal(){
+                    p=document.getElementById('p').value;
+                    t=document.getElementById('t').value;
+                    r=document.getElementById('r').value;
+                    mytotal=(p*t*r)/100;
+                    document.getElementById('total').value=mytotal;
+                    myemi=mytotal/t;
+                    document.getElementById('emi').value=myemi;
+                }
+                function loan(value){
+                    if(value=='car'){
+                            document.getElementById('r').value=8;
+                    }
+                    else   if(value=='home'){
+                            document.getElementById('r').value=10;
+                    }
+                    else   if(value=='personal'){
+                            document.getElementById('r').value=13;
+                    }
+                    else   if(value=='eduation'){
+                            document.getElementById('r').value=11;
+                    }
+                    
+    
+                }
+        </script>
+    </head>
+    <body>
+       <form>
+    
+        principle  :<input type="text" id="p"><br> 
+        Time  :<input type="text" id="t"><br>
+        RATE   :<input type="text" id="r" disabled><br>
+        <select onchange="loan(value)">
+            <option >Type of LOAN  </option>
+            <option value="car">CAR </option>
+            <option value="home">HOME </option>
+            <option value="personal">PERSONL </option>
+            <option value="eduation">EDUCATION </option>
+        </select><br>
+        EMI : <input type="text" id="emi"><br>
+        TOTAL : <input type="text" id="total"><br>
+        <input type="button" value="CACULATE" onclick="cal()">
+        <input type="reset" value="RESET">
+       </form>
+        
+    </body>
+</html>

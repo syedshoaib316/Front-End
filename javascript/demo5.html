@@ -1,0 +1,64 @@
+<html lang="en">
+    <head>
+   
+        <title>Document</title>
+        <script>
+            function singleclick(){
+                alert("Sinlge click....!")
+            }
+            function doubleclick(){
+                alert("doubleclick....!")
+            }
+    
+            function xyz(){
+                // when i focus on full name text box 
+                fn=document.getElementById('fname').value;
+                ln=document.getElementById('lname').value;
+                myfullname=fn + " " +ln;
+               document.getElementById('fullname').value= myfullname;
+            }
+            function abc(){
+                // ewhen  i come out of the box 
+                document.getElementById('fname').style.backgroundColor="red";
+            }
+            // function stop(){
+            // }
+                function chngclr(value){
+                    if(value=='red'){
+                            document.getElementById('bgc').style.backgroundColor=value;
+                    }
+                    else   if(value=='green'){
+                            document.getElementById('bgc').style.backgroundColor=value;
+                    }
+                    else   if(value=='blue'){
+                            document.getElementById('bgc').style.backgroundColor=value;
+                    }
+                    
+                    else   if(value=='pink'){
+                            document.getElementById('bgc').style.backgroundColor=value;
+                    }
+                    
+    
+                }
+        </script>
+    </head>
+    <body id="bgc">
+        <marquee onmouseover="stop()" onmouseout="start()"><h1  > Hi Welcome to Event Demo </h1></marquee>
+        First Name :<input type="text" id="fname" onblur="abc()"><br>
+        LASt Name :<input type="text" id="lname" ><br>
+        Full name :<input type="text" id="fullname" onfocus="xyz()"><br>
+    
+        <input type="submit" value="CLICK" onclick="singleclick()">
+        <input type="submit" value="Dbl CLICK" ondblclick="doubleclick()">
+    
+        <br><br>
+    
+        COLOR :
+         <select onchange="chngclr(value)">
+            <option >Choose </option>
+            <option value="red">RED </option>
+            <option value="blue">BLUE </option>
+            <option value="green">GREEN </option>
+            <option value="pink">PINK </option>
+        </select>
+    </body>
